@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rsp stat="ok">
+<sizes canblog="0" canprint="0" candownload="1">
+	<size label="Square" width="75" height="75" source="http://farm1.staticflickr.com/218/493500736_324e364c5d_s.jpg" url="http://www.flickr.com/photos/ectofranz/493500736/sizes/sq/" media="photo" />
+	<size label="Thumbnail" width="100" height="75" source="http://farm1.staticflickr.com/218/493500736_324e364c5d_t.jpg" url="http://www.flickr.com/photos/ectofranz/493500736/sizes/t/" media="photo" />
+	<size label="Small" width="240" height="180" source="http://farm1.staticflickr.com/218/493500736_324e364c5d_m.jpg" url="http://www.flickr.com/photos/ectofranz/493500736/sizes/s/" media="photo" />
+	<size label="Medium" width="500" height="375" source="http://farm1.staticflickr.com/218/493500736_324e364c5d.jpg" url="http://www.flickr.com/photos/ectofranz/493500736/sizes/m/" media="photo" />
+	<size label="Medium 640" width="640" height="480" source="http://farm1.staticflickr.com/218/493500736_324e364c5d_z.jpg?zz=1" url="http://www.flickr.com/photos/ectofranz/493500736/sizes/z/" media="photo" />
+</sizes>
+</rsp>

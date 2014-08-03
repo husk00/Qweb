@@ -1,0 +1,14 @@
+#N canvas 1 84 450 300 10;
+#X obj 131 49 inlet;
+#X obj 212 49 inlet;
+#X obj 157 211 outlet;
+#X obj 287 52 inlet;
+#X obj 230 213 outlet;
+#X obj 293 211 outlet;
+#X obj 138 135 pyext scripts/urldownload start;
+#X connect 0 0 6 1;
+#X connect 1 0 6 2;
+#X connect 3 0 6 3;
+#X connect 6 0 2 0;
+#X connect 6 1 4 0;
+#X connect 6 2 5 0;

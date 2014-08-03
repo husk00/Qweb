@@ -1,0 +1,14 @@
+#N canvas 1071 187 450 300 10;
+#X obj -437 32 inlet inpath;
+#X obj -354 30 inlet outpath;
+#X obj -266 29 inlet ratiowxh;
+#X obj -541 31 inlet bangStart;
+#X obj -432 250 outlet finish;
+#X obj -524 248 outlet;
+#X obj -501 168 pyext scripts/converter converter;
+#X connect 0 0 6 2;
+#X connect 1 0 6 3;
+#X connect 2 0 6 4;
+#X connect 3 0 6 1;
+#X connect 6 0 5 0;
+#X connect 6 1 4 0;

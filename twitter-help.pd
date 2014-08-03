@@ -1,0 +1,35 @@
+#N canvas 472 127 629 399 10;
+#X declare -lib py;
+#X floatatom 230 150 5 0 0 0 - - -;
+#X obj 205 231 print 2;
+#X obj 205 207 print 1;
+#X obj 211 276 print debug;
+#X obj 11 15 cnv 15 600 25 empty empty Qweb_library:_twitter_help 20
+12 0 14 -233017 -66577 0;
+#X text 28 75 Description:;
+#X text 30 212 Outlets:;
+#X text 30 124 Inlets:;
+#X text 27 58 Category:;
+#X text 89 59 Source \;;
+#X obj 13 313 cnv 15 600 25 empty empty Credits 20 12 0 14 -233017
+-66577 0;
+#X text 27 341 by Luca Carrubba and Luca Franceschini for pantaliQa
+project. Thanks to Thomas Grill for pyext external and help. share/modify/cannibalize
+as you want - www.estereotips.net // info@estereotips.net;
+#X text 105 151 2 number of results;
+#X text 107 75 abstraction that perform research on twitter.;
+#X msg 214 125 puredata;
+#X text 105 128 1 word to search;
+#X obj 330 181 twitter;
+#X obj 205 254 print 3;
+#X text 103 277 4 debug messages;
+#X text 104 209 1 tweet content;
+#X text 103 231 2 tweet author;
+#X text 103 254 3 tweet date;
+#X obj 452 45 import py;
+#X connect 0 0 16 1;
+#X connect 14 0 16 0;
+#X connect 16 0 2 0;
+#X connect 16 1 1 0;
+#X connect 16 2 17 0;
+#X connect 16 3 3 0;

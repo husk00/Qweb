@@ -1,0 +1,12 @@
+#N canvas 1 92 450 300 10;
+#X obj 168 65 inlet;
+#X obj 246 64 inlet;
+#X obj 123 203 outlet;
+#X obj 173 203 outlet;
+#X obj 232 203 outlet;
+#X obj 114 148 pyext scripts/newsfeed start;
+#X connect 0 0 5 1;
+#X connect 1 0 5 2;
+#X connect 5 0 2 0;
+#X connect 5 1 3 0;
+#X connect 5 2 4 0;

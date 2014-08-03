@@ -1,0 +1,14 @@
+#N canvas 1 112 918 278 10;
+#X obj 121 53 inlet;
+#X obj 193 53 inlet;
+#X obj 116 177 outlet;
+#X obj 175 178 outlet;
+#X obj 231 178 outlet;
+#X obj 293 178 outlet;
+#X obj 149 117 pyext scripts/twitter start;
+#X connect 0 0 6 1;
+#X connect 1 0 6 2;
+#X connect 6 0 2 0;
+#X connect 6 1 3 0;
+#X connect 6 2 4 0;
+#X connect 6 3 5 0;

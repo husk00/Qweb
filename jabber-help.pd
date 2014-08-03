@@ -1,0 +1,45 @@
+#N canvas 420 117 631 451 10;
+#X declare -path scripts;
+#X declare -lib py;
+#X obj 176 295 print 2;
+#X obj 205 271 print 1;
+#X obj 11 15 cnv 15 600 25 empty empty Qweb_library:_jabber_help 20
+12 0 14 -233017 -66577 0;
+#X text 28 75 Description:;
+#X text 30 266 Outlets:;
+#X text 30 124 Inlets:;
+#X text 27 58 Category:;
+#X text 89 59 Source \;;
+#X obj 13 360 cnv 15 600 25 empty empty Credits 20 12 0 14 -233017
+-66577 0;
+#X text 27 388 by Luca Carrubba and Luca Franceschini for pantaliQa
+project. Thanks to Thomas Grill for pyext external and help. share/modify/cannibalize
+as you want - www.estereotips.net // info@estereotips.net;
+#X obj 210 319 print debug;
+#X text 107 75 abstraction that implement a jabber client.;
+#X text 105 128 1 connect/disconnect to jabber;
+#X msg 299 126 connect;
+#X msg 368 126 disconnect;
+#X text 105 151 2 jid;
+#X text 105 174 3 password;
+#X msg 158 151 pippo@jabber.org;
+#X msg 183 173 mypassword;
+#X msg 251 197 pippo@jabber.org;
+#X text 105 197 4 user to send message;
+#X text 105 220 5 message;
+#X text 104 272 1 user from;
+#X text 103 295 2 message;
+#X text 102 320 3 debug messages;
+#X obj 498 231 jabber;
+#X msg 179 219 chat message;
+#X obj 473 46 declare -path scripts;
+#X obj 472 64 import py;
+#X connect 13 0 25 0;
+#X connect 14 0 25 0;
+#X connect 17 0 25 1;
+#X connect 18 0 25 2;
+#X connect 19 0 25 3;
+#X connect 25 0 1 0;
+#X connect 25 1 0 0;
+#X connect 25 2 10 0;
+#X connect 26 0 25 4;

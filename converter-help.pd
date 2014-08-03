@@ -1,0 +1,44 @@
+#N canvas 1276 221 623 545 10;
+#X declare -lib py;
+#X declare -path scripts;
+#X obj 11 15 cnv 15 600 25 empty empty Qweb_library:_converter_help
+20 12 0 14 -233017 -66577 0;
+#X text 28 75 Description:;
+#X text 30 323 Outlets:;
+#X text 30 124 Inlets:;
+#X text 27 58 Category:;
+#X text 89 59 Source \;;
+#X obj 13 447 cnv 15 600 25 empty empty Credits 20 12 0 14 -233017
+-66577 0;
+#X text 27 475 by Luca Carrubba and Luca Franceschini for pantaliQa
+project. Thanks to Thomas Grill for pyext external and help. share/modify/cannibalize
+as you want - www.estereotips.net // info@estereotips.net;
+#X obj 472 69 import py;
+#X obj 472 49 declare -path scripts;
+#X text 107 75 abstraction that convert videos using ffmpeg;
+#X obj 426 265 converter ---;
+#X obj 219 130 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 186 152 openpanel;
+#X obj 246 150 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 196 173 symbol /tmp/;
+#X msg 462 199 800x600;
+#X text 105 151 2 input file;
+#X text 105 128 1 start conversion;
+#X text 105 174 3 output dir;
+#X text 288 170 or use;
+#X obj 345 172 dirpanel;
+#X obj 204 341 print finish;
+#X obj 265 320 print filename;
+#X text 104 320 1 new video path/filename;
+#X text 105 342 2 end reached;
+#X text 104 198 4 ratio (640x480 \, 800x600 \, 1024x768) [defaukt:
+same ratio than original];
+#X connect 11 0 23 0;
+#X connect 11 1 22 0;
+#X connect 12 0 11 0;
+#X connect 13 0 11 1;
+#X connect 14 0 13 0;
+#X connect 15 0 11 2;
+#X connect 16 0 11 3;

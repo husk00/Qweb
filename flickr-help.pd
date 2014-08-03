@@ -1,0 +1,59 @@
+#N canvas 462 134 623 545 10;
+#X declare -lib py;
+#X declare -path scripts;
+#X floatatom 163 151 5 0 0 0 - - -;
+#X floatatom 162 177 5 0 0 0 - - -;
+#X floatatom 383 200 5 0 0 0 - - -;
+#X floatatom 372 226 5 0 0 0 - - -;
+#X floatatom 284 257 5 0 0 0 - - -;
+#X obj 205 342 print 2;
+#X obj 205 318 print 1;
+#X obj 148 365 print 3;
+#X obj 210 410 print debug;
+#X obj 238 387 print 4;
+#X obj 11 15 cnv 15 600 25 empty empty Qweb_library:_flickr_help 20
+12 0 14 -233017 -66577 0;
+#X text 28 75 Description:;
+#X text 30 323 Outlets:;
+#X text 30 124 Inlets:;
+#X text 27 58 Category:;
+#X text 89 59 Source \;;
+#X obj 13 447 cnv 15 600 25 empty empty Credits 20 12 0 14 -233017
+-66577 0;
+#X text 107 75 abstraction that can perform flickr research.;
+#X text 108 89 It can also download the image files.;
+#X msg 271 129 puredata;
+#X text 105 200 4 sort [0=RELEVANCY \, 1=LATEST \, 2=INTERESTING];
+#X text 104 256 6 download [0=False \, 1=True];
+#X text 104 282 6 output directory;
+#X text 105 176 3 count;
+#X text 105 151 2 start;
+#X text 105 128 1 term or terms to search;
+#X msg 226 283 /tmp;
+#X text 104 320 1 image name;
+#X text 103 342 2 image author;
+#X text 103 364 3 url;
+#X text 102 388 4 download directory;
+#X text 102 411 5 debug messages;
+#X text 105 225 5 size [0=TINY \, 1=SMALL \, 2=MEDIUM \, 3=LARGE];
+#X text 27 475 by Luca Carrubba and Luca Franceschini for pantaliQa
+project. Thanks to Thomas Grill for pyext external and help. share/modify/cannibalize
+as you want - www.estereotips.net // info@estereotips.net;
+#X obj 480 217 flickr -----;
+#X obj 472 69 import py;
+#X obj 472 49 declare -path scripts;
+#X obj 521 136 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 34 1;
+#X connect 1 0 34 2;
+#X connect 2 0 34 3;
+#X connect 3 0 34 4;
+#X connect 4 0 34 5;
+#X connect 19 0 34 0;
+#X connect 26 0 34 6;
+#X connect 34 0 6 0;
+#X connect 34 1 5 0;
+#X connect 34 2 7 0;
+#X connect 34 3 9 0;
+#X connect 34 4 8 0;
+#X connect 37 0 34 7;

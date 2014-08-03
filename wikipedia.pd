@@ -1,0 +1,16 @@
+#N canvas 623 179 450 300 10;
+#X obj 106 43 inlet;
+#X obj 180 39 inlet;
+#X obj 254 41 inlet;
+#X obj 72 160 outlet;
+#X obj 151 161 outlet;
+#X obj 212 161 outlet;
+#X obj 277 161 outlet;
+#X obj 124 92 pyext scripts/wikipedia start;
+#X connect 0 0 7 1;
+#X connect 1 0 7 2;
+#X connect 2 0 7 3;
+#X connect 7 0 3 0;
+#X connect 7 1 4 0;
+#X connect 7 2 5 0;
+#X connect 7 3 6 0;

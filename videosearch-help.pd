@@ -1,0 +1,49 @@
+#N canvas 405 84 650 498 10;
+#X declare -lib py;
+#X floatatom 230 150 5 0 0 0 - - -;
+#X obj 205 245 print 2;
+#X obj 205 221 print 1;
+#X obj 11 15 cnv 15 600 25 empty empty Qweb_library:_videosearch_help
+20 12 0 14 -233017 -66577 0;
+#X text 28 75 Description:;
+#X text 30 226 Outlets:;
+#X text 30 124 Inlets:;
+#X text 27 58 Category:;
+#X text 89 59 Source \;;
+#X obj 13 404 cnv 15 600 25 empty empty Credits 20 12 0 14 -233017
+-66577 0;
+#X text 27 432 by Luca Carrubba and Luca Franceschini for pantaliQa
+project. Thanks to Thomas Grill for pyext external and help. share/modify/cannibalize
+as you want - www.estereotips.net // info@estereotips.net;
+#X text 105 151 2 number of results;
+#X obj 205 268 print 3;
+#X obj 210 363 print debug;
+#X obj 204 293 print 4;
+#X obj 204 316 print 5;
+#X text 107 75 abstraction that perform research on some video portals.
+;
+#X text 105 128 1 word/s to search;
+#X floatatom 389 172 5 0 0 0 - - -;
+#X text 105 174 3 provider [0=youtube \, 1=gvideo \, 2=yahoovideo]
+;
+#X text 103 245 2 download url;
+#X text 104 222 1 title;
+#X text 103 268 3 thumbnail url;
+#X text 102 293 4 description;
+#X obj 504 165 videosearch;
+#X obj 204 339 print 6;
+#X text 102 339 6 video type;
+#X text 102 364 7 debug messages;
+#X text 102 316 5 filename;
+#X msg 229 125 pd extended;
+#X obj 511 82 import py;
+#X connect 0 0 24 1;
+#X connect 18 0 24 2;
+#X connect 24 0 2 0;
+#X connect 24 1 1 0;
+#X connect 24 2 12 0;
+#X connect 24 3 14 0;
+#X connect 24 4 15 0;
+#X connect 24 5 25 0;
+#X connect 24 6 13 0;
+#X connect 29 0 24 0;

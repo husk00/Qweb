@@ -1,0 +1,36 @@
+#N canvas 91 119 623 387 10;
+#X declare -lib py;
+#X obj 218 218 print 1;
+#X obj 210 265 print debug;
+#X obj 11 15 cnv 15 600 25 empty empty Qweb_library:_urldownload_help
+20 12 0 14 -233017 -66577 0;
+#X text 28 75 Description:;
+#X text 30 223 Outlets:;
+#X text 30 124 Inlets:;
+#X text 27 58 Category:;
+#X text 89 59 Source \;;
+#X obj 13 302 cnv 15 600 25 empty empty Credits 20 12 0 14 -233017
+-66577 0;
+#X text 27 330 by Luca Carrubba and Luca Franceschini for pantaliQa
+project. Thanks to Thomas Grill for pyext external and help. share/modify/cannibalize
+as you want - www.estereotips.net // info@estereotips.net;
+#X text 102 266 3 debug messages;
+#X text 107 75 abstraction of a simple url downloader.;
+#X text 105 128 1 download url;
+#X obj 392 181 urldownload;
+#X obj 230 243 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 104 220 1 file downloaded;
+#X text 103 242 2 download progress;
+#X text 105 151 2 filename;
+#X msg 241 176 /tmp;
+#X msg 177 151 index.html;
+#X msg 204 124 http://puredata.info;
+#X text 105 176 3 path [default /tmp];
+#X obj 510 75 import py;
+#X connect 13 0 0 0;
+#X connect 13 1 14 0;
+#X connect 13 2 1 0;
+#X connect 18 0 13 2;
+#X connect 19 0 13 1;
+#X connect 20 0 13 0;

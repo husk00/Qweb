@@ -1,0 +1,32 @@
+#N canvas 471 123 623 377 10;
+#X declare -lib py;
+#X floatatom 230 150 5 0 0 0 - - -;
+#X obj 205 231 print 2;
+#X obj 205 207 print 1;
+#X obj 210 254 print debug;
+#X obj 11 15 cnv 15 600 25 empty empty Qweb_library:_newsfeed_help
+20 12 0 14 -233017 -66577 0;
+#X text 28 75 Description:;
+#X text 30 212 Outlets:;
+#X text 30 124 Inlets:;
+#X text 27 58 Category:;
+#X text 89 59 Source \;;
+#X obj 13 291 cnv 15 600 25 empty empty Credits 20 12 0 14 -233017
+-66577 0;
+#X text 27 319 by Luca Carrubba and Luca Franceschini for pantaliQa
+project. Thanks to Thomas Grill for pyext external and help. share/modify/cannibalize
+as you want - www.estereotips.net // info@estereotips.net;
+#X text 107 75 abstraction of a simple feed reader.;
+#X text 105 151 2 number of results;
+#X text 105 128 1 feed url;
+#X obj 370 180 newsfeed;
+#X text 102 255 3 debug messages;
+#X text 104 209 1 post title;
+#X text 103 231 2 post content;
+#X msg 180 125 http://puredata.info/news/RSS;
+#X obj 498 49 import py;
+#X connect 0 0 15 1;
+#X connect 15 0 2 0;
+#X connect 15 1 1 0;
+#X connect 15 2 3 0;
+#X connect 19 0 15 0;
